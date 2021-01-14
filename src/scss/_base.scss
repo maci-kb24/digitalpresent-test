@@ -1,0 +1,16 @@
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    height:100%;
+    box-sizing: border-box; 
+    font-size:100%;
+}
+body {
+    min-height:100vh;
+    margin:0;
+    font-size: clamp('100%, 0.8125rem + 2vw, 24px');
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
