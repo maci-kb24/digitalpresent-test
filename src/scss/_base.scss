@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap');
+
 
 *, *:before, *:after {
     box-sizing: inherit;
@@ -12,5 +14,5 @@ body {
     margin:0;
     font-size: clamp('100%, 0.8125rem + 2vw, 24px');
     background-color: #ffffff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', 'Roboto Condensed', sans-serif;
 }

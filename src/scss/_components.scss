@@ -1,0 +1,70 @@
+/* Card Component*/
+.card {
+    background: #ffffff;
+    box-shadow: 0px 24.3973px 42.6953px rgba(232, 229, 255, 0.6);
+    transition: 0.3s;
+    border-radius: 7.84199px;
+    .card-content {
+        padding:17px 17px 24px 17px;
+        .card-title {
+            display: inline-flex;
+            align-items: center;
+            p {
+                font-size: 19px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                color:#1A1636;
+                text-transform: capitalize;
+                margin:0;
+            }
+        }
+        ul.tags {
+            display: inline-flex;
+            li {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px;
+                letter-spacing: 0em;
+                list-style-type: none;
+            }
+        }
+        .button-link {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0.01em;
+            color:#39317C;
+            text-decoration: none;
+            text-align: left;
+        }
+    }
+    img {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    #heart {
+        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+        background-repeat: no-repeat;
+        background-size: 2900%;
+         background-position: left;
+        height: 23px;
+        width: 80px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    .animate {
+        animation: heart-burst .8s steps(28) forwards;
+    } 
+    @keyframes heart-burst {
+        0% {
+            background-position: left
+        }
+        100% {
+            background-position: right
+        }
+    }
+} 
