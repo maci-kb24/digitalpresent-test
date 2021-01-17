@@ -1,15 +1,105 @@
-/* Card Component*/
+/* Search Form*/
+.search-form {
+    display: flex;
+    align-items: center;
+    padding: 93px 0px 85px 0px;
+    form {
+        flex:3;
+        .label {
+            color:#938BD5;
+            background-color: white;
+            padding-top:25px;
+            padding-left: 85px;
+        }
+        .input-form {
+            background-color: #ffffff;
+            padding:16px 0px 33px 35px;
+            display: flex;
+            border-radius: 0px 0px 0px 22px;
+            input {
+                padding-left: 25px;
+                border:none;
+                width:100%;
+                &::placeholder {
+                    color:#292357;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0.01em;
+                }
+            }
+        }
+    }
+    .btn-form {
+        display:inherit;
+        height:100%;
+        .btn-form button {
+            // cursor:pointer;
+            // float: left;
+            &::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            &:active {
+                outline: none;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .btn-category {
+            background-color:#D9D6F1;
+            color:#292357;
+            padding:35px 77px 35px 28px;
+            // border-radius: 22px 0px 0px 22px;
+            cursor: pointer;
+            span {
+                padding-bottom: 10px;
+                display: inline-block;
+            }
+            img {
+                padding-left:15px;
+            }
+            }
+        .btn-search {
+            background-color:#FC6868;
+            color:white;
+            cursor: pointer;
+            padding: 44px 44px 44px 54px;
+            border-radius: 0px 22px 22px 0px;
+            transform: translateX(-2px);
+        }
+    }
+    .mouse-icon {
+        color:#D9D6F1;
+        flex:1;
+        text-align: right;
+    }
+}
+
+/* Image Card */
 .card {
     background: #ffffff;
     box-shadow: 0px 24.3973px 42.6953px rgba(232, 229, 255, 0.6);
     transition: 0.3s;
     border-radius: 7.84199px;
+    .overlay-image {
+        background-image: linear-gradient(0deg, #5145B5 0%, #292357 0.01%, rgba(81, 69, 181, 0.16) 79.02%), url("/public/assets/img/thumbnail.png");
+        max-width: 100%;
+        width:264px;
+        height:207px;
+    }
     .card-content {
         padding:17px 17px 24px 17px;
         .card-title {
-            display: inline-flex;
+            display:flex;
             align-items: center;
+            justify-content: space-between;
             p {
+                flex:1;
                 font-size: 19px;
                 font-style: normal;
                 font-weight: 400;
@@ -19,9 +109,45 @@
                 text-transform: capitalize;
                 margin:0;
             }
+            .heart {
+                background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
+                background-repeat: no-repeat;
+                background-size: 2900%;
+                 background-position: left;
+                height: 23px;
+                width: 80px;
+                cursor: pointer;
+            }
+
+        }
+        .card-location {
+            display: flex;
+            align-items: center;
+            justify-items: start;
+            p {
+                padding-left: 5px;
+                color:#9892C0;
+            }
         }
         ul.tags {
             display: inline-flex;
+            padding:17px 0px 61px 0px;
+            margin:0;
+            .tag1 {
+                background-color:#B1BDFA;
+                color:#2243F1;
+                padding:8px 25px 7px 12px;
+            }
+            .tag2 {
+                color: #0D94CF;
+                background-color:#B1E4FA;
+                padding:8px 10px 7px 13px;
+            }
+            .tag3 {
+                color:#099068;
+                background-color:#B2FAE5;
+                padding:8px 11px 7px 12px;
+            }
             li {
                 font-size: 14px;
                 font-style: normal;
@@ -29,6 +155,8 @@
                 line-height: 14px;
                 letter-spacing: 0em;
                 list-style-type: none;
+                border-radius:30.5px;
+                margin-right:10px;
             }
         }
         .button-link {
@@ -40,31 +168,27 @@
             color:#39317C;
             text-decoration: none;
             text-align: left;
+            span {
+                margin-left:15px;
+            }
         }
     }
     img {
         max-width: 100%;
         border-radius: 10px 10px 0 0;
     }
-    #heart {
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/web_heart_animation.png');
-        background-repeat: no-repeat;
-        background-size: 2900%;
-         background-position: left;
-        height: 23px;
-        width: 80px;
-        margin: 0 auto;
-        cursor: pointer;
-    }
-    .animate {
-        animation: heart-burst .8s steps(28) forwards;
-    } 
-    @keyframes heart-burst {
-        0% {
-            background-position: left
-        }
-        100% {
-            background-position: right
-        }
-    }
 } 
+
+/* Animation heart icon*/
+
+.animate {
+    animation: heart-burst .8s steps(28) forwards;
+} 
+@keyframes heart-burst {
+    0% {
+        background-position: left
+    }
+    100% {
+        background-position: right
+    }
+}

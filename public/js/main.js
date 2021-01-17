@@ -1,3 +1,5 @@
-document.getElementById('heart').onclick = function() {
-    this.classList.toggle('animate');
-}
+$(function() {
+    $(".heart").click(function() {
+      $(this).toggleClass("animate");
+    });
+  });
